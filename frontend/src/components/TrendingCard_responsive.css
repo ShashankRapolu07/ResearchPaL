@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'Alegreya Sans normal';
+    src: url('../assets/fonts/AlegreyaSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans medium';
+  src: url('../assets/fonts/AlegreyaSans-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans bold';
+    src: url('../assets/fonts/AlegreyaSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  src: url('../assets/fonts/AlegreyaSansSC-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  src: url('../assets/fonts/AlegreyaSansSC-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.trending-card-responsive {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffffbc;
+    padding: 20px 20px 15px 20px;
+    width: 280px;
+    height: 340px;
+    border-radius: 3px;
+    box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.trending-card-responsive:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.2);
+}
+
+.trending-card-responsive:active {
+    transform: scale(1);
+}
+
+.trending-pdf-preview-container-responsive {
+    border: 1px solid #0000005d;
+    height: 100px;
+    width: 240px;
+    overflow: hidden;
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.85;
+}
+
+.trending-pdf-preview-container-responsive:hover {
+    border: 1.5px solid rgb(95, 95, 95);
+}
+
+.trending-pdf-preview-container-responsive:active {
+    opacity: 0.7;
+}
+
+.trending-main-content-responsive {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.trending-title-and-abstract-container-responsive {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.trending-title-container-responsive {
+    display: flex;
+    flex-direction: column;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+}
+
+.trending-title-container-responsive span {
+    width: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: #464646;
+}
+
+.trending-abstract-container-responsive {
+    padding-right: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 0.9;
+}
+
+.trending-abstract-container-responsive span {
+    width: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 13px;
+    text-align: left;
+    color: #464646;
+}
+
+.trending-metadata-container-responsive {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2px;
+    justify-content: end;
+}
+
+.trending-dot-separator-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trending-dot-separator-responsive img {
+    width: 8px;
+    height: 8px;
+}
+
+.trending-date-container-responsive {
+    display: flex;
+    height: fit-content;
+}
+
+.trending-date-container-responsive span,
+.trending-github-profile-responsive a,
+.trending-github-stars-responsive span {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 11px;
+    color: #464646;
+}
+
+.trending-citation-img-container-responsive {
+    display: flex;
+    height: fit-content;
+    padding-top: 2px;
+}
+
+.trending-citation-img-container-responsive img {
+    width: 9px;
+    height: 9px;
+}
+
+.trending-code-stats-container-responsive {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.trending-github-profile-responsive {
+    display: flex;
+    height: fit-content;
+    max-width: 120px;
+    overflow: hidden;
+}
+
+.trending-github-profile-responsive a {
+    color: #1c8ec7;
+}
+
+.trending-code-framework-responsive {
+    display: flex;
+    height: fit-content;
+}
+
+.trending-code-framework-pytorch-responsive {
+    width: 40px;
+}
+
+.trending-code-framework-tf-responsive {
+    width: 50px;
+}
+
+.trending-github-stars-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    height: fit-content;
+}
+
+.trending-github-stars-img-container-responsive {
+    padding-top: 0px;
+    display: flex;
+}
+
+.trending-github-stars-img-container-responsive img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .trending-pdf-loader-responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+  }
+
+  .no-hover {
+    pointer-events: none;
+    transform: none !important;
+    border: 1px solid #0000005d !important;
+  }
+  
+  .trending-pdf-preview-container-responsive.no-hover:hover {
+    border: 1px solid #0000005d;
+    transform: none;
+    cursor: default;
+  }
+
+  .trending-error-container-responsive {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Alegreya Sans normal', sans-serif;
+    font-size: 13px;
+    text-align: center;
+  }
+
+@media (max-width: 500px) {
+    .trending-card-responsive {
+        height: 320px;
+        width: 250px;
+    }
+
+    .trending-github-profile-responsive {
+        max-width: 100px;
+    }
+
+    .trending-title-and-abstract-container-responsive {
+        gap: 7px;
+    }
+
+    .trending-title-container-responsive {
+        -webkit-line-clamp: 3;
+    }
+
+    .trending-abstract-container-responsive {
+        -webkit-line-clamp: 4;
+        line-height: 0.9;
+    }
+
+    .trending-pdf-preview-container-responsive {
+        width: 210px;
+        height: 100px;
+    }
+
+    .trending-error-container-responsive {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .trending-card-responsive {
+        height: 310px;
+        width: 210px;
+        padding: 20px 15px 15px 15px;
+    }
+
+    .trending-title-container-responsive {
+        line-height: 0.9;
+    }
+
+    .trending-title-container-responsive span {
+        font-size: 15px;
+    }
+
+    .trending-abstract-container-responsive span {
+        font-size: 11px;
+    }
+
+    .trending-code-framework-tf-responsive {
+        width: 40px;
+    }
+
+    .trending-date-container-responsive span,
+    .trending-github-profile-responsive a,
+    .trending-github-stars-responsive span {
+        font-size: 9px;
+    }
+
+    .trending-github-stars-img-container-responsive img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .trending-pdf-preview-container-responsive {
+        width: 180px;
+        height: 100px;
+    }
+
+    .trending-error-container-responsive {
+        font-size: 11px;
+    }
+}

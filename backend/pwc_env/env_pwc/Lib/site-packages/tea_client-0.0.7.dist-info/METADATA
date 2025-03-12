@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: tea-client
+Version: 0.0.7
+Summary: Library for making API clients.
+Home-page: https://github.com/alefnula/tea-client
+Author: Viktor Kerkez
+Author-email: alefnula@gmail.com
+Maintainer: Viktor Kerkez
+Maintainer-email: alefnula@gmail.com
+License: Apache-2.0
+Platform: Windows
+Platform: POSIX
+Platform: MacOSX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: httpx[http2] (~=0.14.2)
+Requires-Dist: pydantic (~=1.6.1)
+Requires-Dist: tea (~=0.1.2)
+
+# Tea Client
+
+

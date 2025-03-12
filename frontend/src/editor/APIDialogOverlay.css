@@ -1,0 +1,408 @@
+@font-face {
+  font-family: 'Bai Jumjuree regular';
+  src: url('../assets/fonts/BaiJamjuree-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bai Jumjuree semi bold';
+  src: url('../assets/fonts/BaiJamjuree-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bai Jumjuree medium';
+  src: url('../assets/fonts/BaiJamjuree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bai Jumjuree bold';
+  src: url('../assets/fonts/BaiJamjuree-Bold.ttf') format('truetype');
+}
+
+.api-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    z-index: 9999;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+    overflow: auto;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.api-dialog-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  max-width: 500px;
+  width: 85%;
+  padding: 15px 20px 12px 20px;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 2px 6px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.apidialogbox-main-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.apidialogbox-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.apidialogbox-title-container span {
+  font-family: 'Bai Jumjuree bold', Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.apidialogbox-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.apidescription-container {
+  width: 100%;
+  border: 1.5px solid #969696;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'Bai Jumjuree regular', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  user-select: none;
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.apidescription-container:hover {
+  border-color: rgb(0, 151, 0);
+  background-color: #F9F9F9;
+}
+
+.apidescription-container.encrypt-mode:hover {
+  border-color: rgba(36, 85, 190, 1);
+}
+
+.apidescription-title {
+  font-family: 'Bai Jumjuree bold', Roboto, sans-serif;
+  font-size: 14px;
+  color: #454545;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.apidescription-text {
+  font-family: 'Bai Jumjuree medium', Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #454545;
+  margin-bottom: 10px;
+}
+
+.apidescription-list {
+  padding-left: 20px;
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.apidescription-list li {
+  font-family: 'Bai Jumjuree medium', Roboto, sans-serif;
+  font-size: 12px;
+  color: #454545;
+  line-height: 1.3;
+}
+
+.apidescription-list li strong {
+  font-family: 'Bai Jumjuree bold', Roboto, sans-serif;
+  color: #454545;
+}
+
+.apidialogbox-submit-container,
+.apidialogbox-encrypt-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.apidialogbox-submit-container.adobe {
+  gap: 5px;
+}
+
+.apidialogbox-submit-container input,
+.apidialogbox-encrypt-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'Bai Jumjuree medium', Roboto, sans-serif;
+  color: #333;
+  border: 1.5px solid #969696;
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.apidialogbox-submit-container input:hover,
+.apidialogbox-encrypt-container input:hover {
+  background-color: #F9F9F9;
+  color: #333;
+  border-color: #3333338c;
+}
+
+.apidialogbox-submit-container input:focus {
+  outline: none;
+  border: 1.5px solid rgb(0, 151, 0);
+  background-color: #F9F9F9;
+}
+
+.apidialogbox-submit-container input::placeholder {
+  font-family: 'Bai Jumjuree medium', Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #3333338a;
+  transition: all 0.2s ease;
+}
+
+.apidialogbox-submit-container input:hover::placeholder,
+.apidialogbox-encrypt-container input:hover::placeholder {
+  color: #333333dc;
+}
+
+.apidialogbox-submit-button,
+.apidialogbox-encrypt-button {
+  background-color: rgba(36, 85, 190, 1);
+  border-radius: 3px;
+  padding: 7px 15px 10px 15px;
+  transition: all 0.2s ease;
+}
+
+.apidialogbox-submit-button span,
+.apidialogbox-encrypt-button span {
+  font-family: 'Bai Jumjuree medium', Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.apidialogbox-submit-button:hover {
+  background-color: rgb(29, 73, 168);
+  cursor: pointer;
+}
+
+.apidialogbox-encrypt-container input:focus {
+  outline: none;
+  border: 1.5px solid rgba(36, 85, 190, 1);
+  background-color: #F9F9F9;
+}
+
+.apidialogbox-encrypt-container input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  color: #3333338a;
+  transition: all 0.2s ease;
+}
+
+.apidialogbox-encrypt-button {
+  background-color: rgb(0, 151, 0);
+}
+
+.apidialogbox-encrypt-button.adobe {
+  margin-top: 10px;
+}
+
+.apidialogbox-encrypt-button:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+.transition-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 100px;
+}
+
+.transition-container.adobe {
+  height: 140px;
+}
+
+.apidialogbox-submit-container,
+.apidialogbox-encrypt-container {
+  position: absolute;
+  width: 100%;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.encryptionkey-detected-container {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 10;
+}
+
+.encryptionkey-detected-container span {
+  font-family: 'Bai Jumjuree semi bold', Roboto, sans-serif;
+  font-size: 10.5px;
+  color: rgba(36, 85, 190, 1);
+}
+
+@media (max-width: 600px) {
+  .apidialogbox-title-container {
+    margin-bottom: 8px;
+  }
+
+  .apidescription-container {
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .apidialogbox-encrypt-button.adobe {
+    margin-top: 10px;
+  }
+
+  .apidialogbox-title-container span {
+    font-size: 13px;
+  }
+
+  .apidescription-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .apidescription-text {
+    font-size: 10px;
+    line-height: 1.1;
+    margin-bottom: 5px;
+  }
+
+  .apidescription-list li {
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+  .apidialogbox-submit-container input,
+  .apidialogbox-encrypt-container input {
+    padding: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    border: 1.5px solid #969696;
+  }
+
+  .apidialogbox-submit-container input::placeholder {
+    font-size: 10px;
+  }
+
+  .apidialogbox-submit-button span,
+  .apidialogbox-encrypt-button span {
+    font-size: 10px;
+  }
+
+  .apidialogbox-encrypt-container input::placeholder {
+    font-size: 10px;
+  }
+
+  .encryptionkey-detected-container span {
+    font-size: 8.5px;
+  }
+
+  .api-dialog-content {
+    border-radius: 4px;
+    padding: 13px 18px 5px 18px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .apidescription-list {
+    padding-left: 18px;
+    gap: 5px;
+  }
+
+  .apidialogbox-submit-button,
+  .apidialogbox-encrypt-button {
+    padding: 4px 13px 8px 13px;
+  }
+}

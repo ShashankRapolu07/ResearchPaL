@@ -1,0 +1,200 @@
+ .papersLoaderResponsive-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .papersLoaderResponsive-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 441px;
+    background-color: #ffffffbc;
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+  }
+  
+  .papersLoaderResponsive-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: papersLoaderResponsiveShimmer 1.5s infinite;
+  }
+  
+  @keyframes papersLoaderResponsiveShimmer {
+    0% {
+      left: -150px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .papersLoaderResponsive-pdfBlock {
+    width: 300px;
+    height: 150px;
+    border: 1px solid #0000005d;
+    opacity: 0.85;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .papersLoaderResponsive-pdfShimmer {
+    width: 100%;
+    height: 100%;
+    background-color: #d3d3d3;
+  }
+  
+  .papersLoaderResponsive-mainContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .papersLoaderResponsive-titleBar {
+    width: 80%;
+    height: 16px;
+    background-color: #d3d3d3;
+    margin-bottom: 40px;
+    border-radius: 3px;
+  }
+  
+  .papersLoaderResponsive-abstractLines {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .papersLoaderResponsive-abstractLines > div {
+    width: 90%;
+    height: 13px;
+    background-color: #d3d3d3;
+    border-radius: 3px;
+  }
+  
+  .papersLoaderResponsive-metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+  }
+  
+  .papersLoaderResponsive-dateLine {
+    width: 40%;
+    height: 12px;
+    background-color: #d3d3d3;
+    border-radius: 3px;
+  }
+  
+  .papersLoaderResponsive-codeStats {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .papersLoaderResponsive-codeStats > div {
+    flex: 1;
+    height: 12px;
+    background-color: #d3d3d3;
+    border-radius: 3px;
+  }
+  
+  @media (min-width: 701px) and (max-width: 800px) {
+    .papersLoaderResponsive-card {
+      width: 500px;
+      height: 429px;
+      padding: 25px;
+    }
+  
+    .papersLoaderResponsive-pdfBlock {
+      width: 450px;
+      height: 150px;
+    }
+  
+    .papersLoaderResponsive-titleBar {
+      height: 18px;
+    }
+  }
+  
+  @media (min-width: 650px) and (max-width: 700px) {
+    .papersLoaderResponsive-card {
+      width: 450px;
+      height: 418px;
+    }
+  
+    .papersLoaderResponsive-pdfBlock {
+      width: 400px;
+    }
+  }
+  
+  @media (max-width: 530px) {
+    .papersLoaderResponsive-card {
+      width: 300px;
+      height: 441px;
+    }
+  
+    .papersLoaderResponsive-pdfBlock {
+      width: 250px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .papersLoaderResponsive-card {
+      width: 250px;
+      height: 398px;
+      padding: 20px;
+    }
+  
+    .papersLoaderResponsive-pdfBlock {
+      width: 210px;
+      height: 120px;
+    }
+  
+    .papersLoaderResponsive-titleBar {
+      height: 14px;
+    }
+  
+    .papersLoaderResponsive-abstractLines > div {
+      height: 10px;
+    }
+  
+    .papersLoaderResponsive-dateLine {
+      height: 10px;
+    }
+  
+    .papersLoaderResponsive-codeStats > div {
+      height: 10px;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    .papersLoaderResponsive-card {
+      width: 220px;
+      height: 397px;
+    }
+  
+    .papersLoaderResponsive-pdfBlock {
+      width: 180px;
+    }
+    
+    .papersLoaderResponsive-dateLine {
+      width: 50%;
+    }
+  }  

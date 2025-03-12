@@ -1,0 +1,256 @@
+.trending-carousel {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+    overflow: hidden;
+    overflow-y: visible;
+  }
+  
+  .trending-carousel:hover .arrow-carousel {
+    opacity: 1;
+  }
+  
+  .carousel-items {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    perspective: 1000px;
+  }
+  
+  .item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, filter 0.4s ease-in-out;
+  }
+  
+  .level0 {
+    transform: translate(-50%, -50%) scale(1) rotateY(0deg);
+    opacity: 1;
+    filter: none;
+    z-index: 10;
+  }
+  
+  .level-1 {
+    transform: translate(-145%, -50%) scale(0.75) rotateY(0deg);
+    opacity: 0.7;
+    filter: blur(3px);
+    z-index: 5;
+  }
+  
+  .level-2 {
+    transform: translate(-225%, -50%) scale(0.75) rotateY(0deg);
+    opacity: 0.5;
+    filter: blur(3px);
+    z-index: 1;
+  }
+  
+  .level1 {
+    transform: translate(45%, -50%) scale(0.75) rotateY(0deg);
+    opacity: 0.7;
+    filter: blur(3px);
+    z-index: 5;
+  }
+  
+  .level2 {
+    transform: translate(125%, -50%) scale(0.75) rotateY(0deg);
+    opacity: 0.5;
+    filter: blur(3px);
+    z-index: 1;
+  }
+
+  .level3 {
+    transform: translate(115%, -50%) scale(0.65) rotateY(0deg);
+    opacity: 0;
+    filter: blur(3px);
+    z-index: 2;
+  }
+  
+  .level4 {
+    transform: translate(175%, -50%) scale(0.6) rotateY(0deg);
+    opacity: 0;
+    filter: blur(3px);
+    z-index: 1;
+  }
+  
+  .level-3 {
+    transform: translate(-165%, -50%) scale(0.65) rotateY(0deg);
+    opacity: 0;
+    filter: blur(3px);
+    z-index: 2;
+  }
+  
+  .level-4 {
+    transform: translate(-215%, -50%) scale(0.6) rotateY(0deg);
+    opacity: 0;
+    filter: blur(3px);
+    z-index: 1;
+  }
+
+  .level-outside {
+    transform: translate(-9999px, -9999px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .level1, .level2,
+  .level-1, .level-2,
+  .level3, .level-3,
+  .level4, .level-4,
+  .level-outside {
+  pointer-events: none;
+}
+  
+  .arrow-carousel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 24px;
+    width: 30px;
+    height: 95%;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    user-select: none;
+  }
+  
+  .arrow-carousel:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .arrow-carousel:active {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .arrow-carousel-left {
+    left: 10px;
+  }
+  
+  .arrow-carousel-right {
+    right: 10px;
+  }
+
+@media (max-width: 1240px) {
+  .level-1 {
+    transform: translate(-145%, -50%) scale(0.75) rotateY(0deg);
+  }
+
+  .level1 {
+    transform: translate(45%, -50%) scale(0.75) rotateY(0deg);
+  }
+}
+
+@media (max-width: 1050px) {
+  .level-1 {
+    transform: translate(-140%, -50%) scale(0.75) rotateY(0deg);
+  }
+
+  .level1 {
+    transform: translate(40%, -50%) scale(0.75) rotateY(0deg);
+  }
+}
+
+@media (max-width: 799px) {
+  .level-1 {
+    transform: translate(-145%, -50%) scale(0.75) rotateY(0deg);
+  }
+
+  .level1 {
+    transform: translate(45%, -50%) scale(0.75) rotateY(0deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .level-1 {
+    transform: translate(-143%, -50%) scale(0.75) rotateY(0deg);
+  }
+
+  .level1 {
+    transform: translate(43%, -50%) scale(0.75) rotateY(0deg);
+  }
+}
+
+@media (max-width: 650px) {
+  .level-1 {
+    transform: translate(-150%, -50%) scale(0.75) rotateY(0deg);
+  }
+
+  .level1 {
+    transform: translate(50%, -50%) scale(0.75) rotateY(0deg);
+  }
+}
+
+@media (max-width: 420px) {
+  .level-1 {
+    transform: translate(-145%, -50%) scale(0.75) rotateY(0deg);
+  }
+
+  .level1 {
+    transform: translate(45%, -50%) scale(0.75) rotateY(0deg);
+  }
+}
+
+@media (max-width: 370px) {
+  .level-1 {
+    transform: translate(-142%, -50%) scale(0.75) rotateY(0deg);
+  }
+
+  .level1 {
+    transform: translate(42%, -50%) scale(0.75) rotateY(0deg);
+  }
+}
+
+@media (max-width:900px) {
+  .carousel-items {
+    height: 225px;
+  }
+}
+
+@media (max-width: 800px) {
+  .carousel-items {
+    height: 360px;
+  }
+
+  .level-1 {
+    transform: translate(-150%, -50%) scale(0.75) rotateY(0deg);
+  }
+
+  .level1 {
+    transform: translate(50%, -50%) scale(0.75) rotateY(0deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .carousel-items {
+    height: 335px;
+  }
+}
+
+@media (max-width: 430px) {
+  .carousel-items {
+    height: 340px;
+  }
+
+  .level-1 {
+    transform: translate(-145%, -50%) scale(0.75) rotateY(0deg);
+  }
+
+  .level1 {
+    transform: translate(45%, -50%) scale(0.75) rotateY(0deg);
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel-items {
+    height: 330px;
+  }
+}

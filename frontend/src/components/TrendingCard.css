@@ -1,0 +1,348 @@
+@font-face {
+    font-family: 'Alegreya Sans normal';
+    src: url('../assets/fonts/AlegreyaSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Alegreya Sans medium';
+  src: url('../assets/fonts/AlegreyaSans-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans';
+    src: url('../assets/fonts/AlegreyaSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  src: url('../assets/fonts/AlegreyaSansSC-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  src: url('../assets/fonts/AlegreyaSansSC-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.trending-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #ffffffbc;
+    border-radius: 3px;
+    padding: 20px 25px 20px 10px;
+    box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 235px; 
+    width: 750px;
+  }
+
+.trending-card:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.2);
+}
+
+.trending-card:active {
+  transform: scale(1);
+}
+
+  .trending-index-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 100%;
+    flex-shrink: 0;
+  }
+  
+  .trending-index-text {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 21px;
+    font-weight: normal;
+    text-align: center;
+    color: #464646;
+  }
+  
+  .trending-left-divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px 0px 10px;
+    height: 100%;
+  }
+  
+  .trending-left-dividing-line {
+    width: 2px;
+    height: 95%;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .trending-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5px 0px 0px 0px;
+  }
+  
+  .trending-title-and-abstract-container {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  
+  .trending-title-container {
+    width: 100%;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .trending-title-text {
+    width: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: #464646;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .trending-abstract-container {
+    width: 100%;
+  }
+  
+  .trending-abstract-text {
+    width: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: #464646;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+.trending-metadata-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: end;
+  }
+
+  .trending-code-stats-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .trending-date-container {
+    display: flex;
+  }
+
+  .trending-github-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .trending-date-container span,
+  .trending-github-profile a {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 12px;
+    color: #464646;
+  }
+
+  .trending-github-stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .trending-github-stars-img-container {
+    height: 100%;
+    display: flex;
+  }
+
+  .trending-github-stars-img-container img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .trending-dot-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .trending-dot-separator img {
+    width: 8px;
+    height: 8px;
+  }
+
+  .trending-github-stars span {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    color: #464646;
+  }
+  
+  .trending-github-profile a {
+    text-decoration: none;
+    color: #1c8ec7;
+    font-weight: 500;
+  }
+  
+  .trending-code-framework {
+    height: 100%;
+    padding-top: 0px;
+  }
+
+  .trending-code-framework-tf {
+    width:60px;
+  }
+
+  .trending-code-framework-pytorch {
+    width: 50px;
+  }
+  
+  .trending-right-divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px;
+    height: 100%;
+  }
+  
+  .trending-right-dividing-line {
+    width: 2px;
+    height: 65%;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .trending-pdf-container-wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+  }
+  
+  .trending-pdf-preview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 195px;
+    border: 1px solid #0000005d;
+    overflow: hidden;
+    opacity: 0.85;
+}
+  
+  .trending-pdf-preview-image {
+    width: 180px;
+  }
+
+  .trending-pdf-preview-container:hover {
+    border: 1.5px solid rgb(95, 95, 95);
+  }
+
+  .trending-pdf-preview-container:active {
+    opacity: 0.7;
+  }
+
+  .trending-pdf-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+  }
+
+  .no-hover {
+    pointer-events: none;
+    transform: none !important;
+    border: 1px solid #0000005d !important;
+  }
+  
+  .trending-pdf-preview-container.no-hover:hover {
+    border: 1px solid #0000005d;
+    transform: none;
+    cursor: default;
+  }
+
+  .trending-error-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Alegreya Sans normal', sans-serif;
+    font-size: 14px;
+  }
+
+@media (max-width: 950px) {
+  .trending-card {
+    width: 700px;
+  }
+}
+
+@media (max-width: 900px) {
+  .trending-card {
+    width: 650px;
+    height: 210px;
+  }
+
+  .trending-title-and-abstract-container {
+    gap: 10px;
+  }
+
+  .trending-title-text {
+    font-size: 18px;
+  }
+
+  .trending-abstract-text {
+    font-size: 12px;
+    -webkit-line-clamp: 5;
+  }
+
+  .trending-date-container span,
+  .trending-citation-container span,
+  .trending-conference-container span,
+  .trending-github-profile a,
+  .trending-github-stars span {
+    font-size: 10px;
+  }
+
+  .trending-pdf-container-wrapper {
+    width: 140px;
+  }
+
+  .trending-pdf-preview-container {
+    width: 160px;
+    height: 170px;
+  }
+
+  .trending-error-container {
+    font-size: 13px;
+  }
+}

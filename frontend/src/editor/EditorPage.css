@@ -1,0 +1,1034 @@
+@font-face {
+    font-family: 'Alegreya Sans regular';
+    src: url('../assets/fonts/AlegreyaSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans medium';
+  src: url('../assets/fonts/AlegreyaSans-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans bold';
+    src: url('../assets/fonts/AlegreyaSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans thin';
+    src: url('../assets/fonts/AlegreyaSans-Thin.ttf') format('truetype');
+    font-weight: thin;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans italic';
+    src: url('../assets/fonts/AlegreyaSans-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bai Jumjuree regular';
+    src: url('../assets/fonts/BaiJamjuree-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bai Jumjuree semi bold';
+    src: url('../assets/fonts/BaiJamjuree-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bai Jumjuree medium';
+    src: url('../assets/fonts/BaiJamjuree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bai Jumjuree bold';
+    src: url('../assets/fonts/BaiJamjuree-Bold.ttf') format('truetype');
+}
+
+.editor-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+.editor-pdf-container {
+    height: 100%;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.01);
+    overflow: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0);
+}
+
+.editor-pdf-container::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0);
+    width: 6px;
+  }
+  
+  .editor-pdf-container::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  .editor-pdf-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+  
+  .editor-pdf-container::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+
+.editor-pdf-left-container-wrapper {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    z-index: 10;
+    border-radius: 0px 3px 3px 0px;
+    background-color: rgb(27, 39, 54);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.editor-pdf-left-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 7px 3px;
+    border-radius: 0px 3px 3px 0px;
+    gap: 5px;
+}
+
+.menu-button-wrapper,
+.zoom-in-button-wrapper,
+.zoom-out-button-wrapper,
+.fit-width-button-wrapper,
+.maximize-button-wrapper,
+.minimize-button-wrapper {
+    display: flex;
+    border-radius: 3px;
+}
+
+.menu-button,
+.zoom-in-button,
+.zoom-out-button,
+.fit-width-button,
+.maximize-button,
+.minimize-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.menu-button img,
+.zoom-in-button img,
+.zoom-out-button img,
+.fit-width-button img,
+.maximize-button img,
+.minimize-button img {
+    width: 14px;
+    height: 14px;
+}
+
+.menu-button:hover,
+.zoom-in-button:hover,
+.zoom-out-button:hover,
+.fit-width-button:hover,
+.maximize-button:hover,
+.minimize-button:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+    cursor: pointer;
+}
+
+.menu-button:active,
+.zoom-in-button:active,
+.zoom-out-button:active,
+.fit-width-button:active,
+.maximize-button:active,
+.minimize-button:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.editor-pdf-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.editor-pdf-downloading-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.editor-pdf-downloading-text {
+    display: flex;
+    gap: 6px;
+    align-items: end;
+    justify-content: center;
+}
+
+.editor-pdf-downloading-text span {
+    font-family: 'Bai Jumjuree medium', 'Alegreya Sans medium', sans-serif;
+    font-size: 13px;
+    color: #F7F7F7;
+}
+
+.editor-pdf-downloader-dotpulse {
+    padding-bottom: 0px;
+}
+
+.editor-pdf-download-error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    user-select: none;
+}
+
+.editor-pdf-download-error-container img {
+    width: 35px;
+    height: 35px;
+    user-select: none;
+}
+
+.editor-pdf-download-error-container span {
+    font-family: 'Bai Jumjuree medium', 'Alegreya Sans medium', sans-serif;
+    font-size: 13px;
+    color: #F7F7F7;
+    text-align: center;
+}
+
+.editor-pdf-content-container {
+    width: 100%;
+    height: 100%;
+}
+
+.editor-pdf-right-container-1,
+.editor-main-right-container-1 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    transition: transform 0.15s ease-in-out;
+}
+
+.editor-pdf-right-container-2,
+.editor-main-right-container-2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 86px;
+    right: 0px;
+    transition: transform 0.15s ease-in-out;
+}
+
+.gallery-content-wrapper,
+.code-files-content-wrapper {
+    display: flex;
+    border-radius: 0px 0px 0px 0px;
+    cursor: pointer;
+    z-index: 100;
+    padding: 2px 0px 2px 2px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.gallery-button,
+.code-files-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 40px;
+    border-radius: 3px 0px 0px 3px;
+    box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgb(30, 45, 63);
+}
+
+.gallery-button.open,
+.code-files-button.open {
+    background-color: #1B2636;
+}
+
+.gallery-button {
+    margin-top: 15px;
+}
+
+.gallery-button img,
+.code-files-button img {
+    height: 14px;
+    width: 14px;
+    user-select: none;
+}
+
+.gallery-button:hover,
+.code-files-button:hover {
+    background-color: #1B2636;
+    cursor: pointer;
+}
+
+.gallery-button.open:hover,
+.code-files-button.open:hover {
+    background-color: rgb(30, 45, 63);
+    cursor: pointer;
+}
+
+.gallery-button:active,
+.code-files-button:active {
+    background-color: rgb(30, 45, 63);
+    cursor: pointer;
+}
+
+.gallery-content-container,
+.code-files-content-container {
+    background: linear-gradient(to bottom right, rgb(28, 43, 61), rgb(28, 42, 61));
+    color: #fff;
+    font-family: 'Bai Jumjuree medium', sans-serif;
+    height: 93dvh;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0);
+    border-radius: 2px 0px 0px 2px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 0;
+}
+
+.code-files-content-container {
+    width: 170px;
+    justify-content: center;
+}
+
+.gallery-content-container::-webkit-scrollbar,
+.code-files-content-container::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0);
+    width: 6px;
+  }
+  
+  .gallery-content-container::-webkit-scrollbar-track,
+  .code-files-content-container::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  .gallery-content-container::-webkit-scrollbar-thumb,
+  .code-files-content-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+  
+  .gallery-content-container::-webkit-scrollbar-thumb:hover,
+  .code-files-content-container::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+
+.gallery-content-container span,
+.code-files-content-container span {
+    font-family: 'Bai Jumjuree medium', Roboto, sans-serif;
+    font-size: 13px;
+    color: #F7F7F7;
+    text-align: center;
+}
+
+.gallery-content-title {
+    background-color: #192332;
+    border-radius: 2px 0px 0px 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-content-title span {
+    font-family: 'Bai Jumjuree semi bold', Roboto, sans-serif;
+    font-size: 13px;
+    color: #F7F7F7;
+    text-align: center;
+}
+
+.gallery-figures-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0.6;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.gallery-tables-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0.4;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.gallery-images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 15px 0px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0);
+    &::-webkit-scrollbar {
+        background-color: rgba(255, 255, 255, 0);
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+    }
+}
+
+.gallery-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transition: all 0.15s ease;
+    user-select: none;
+}
+
+.gallery-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.gallery-image-wrapper:hover {
+    opacity: 0.85;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.editor-csvfile-template-container {
+    display: flex;
+    padding: 6px 13px;
+    background: transparent;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    position: relative;
+  
+    border: 1.5px solid rgb(23, 173, 76);
+    cursor: pointer;
+    margin: 0 0 5px 0;
+  }
+  
+  .editor-csvfile-template-container:hover {
+    border-color: rgb(25, 210, 90);
+  }
+  
+  .editor-csvfile-template-container span {
+    font-family: 'Bai Jumjuree semi bold', Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    user-select: none;
+    color: rgb(23, 173, 76);
+  }
+
+.chatopen-button-wrapper {
+    display: flex;
+    position: absolute;
+    top: 45dvh;
+    right: 0px;
+    background-color: rgb(30, 45, 63);
+    border-radius: 3px 0px 0px 3px;
+    box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    user-select: none;
+}
+
+.chatopen-button {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 3px 0px 0px 3px;
+    width: 100%;
+    height: 100%;
+    padding: 12px 8px;
+}
+
+.chatopen-button img {
+    width: 12px;
+    height: 12px;
+    transform: rotate(180deg);
+}
+
+.chatopen-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.chatopen-button:active {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.editor-page-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .editor-page-indicator {
+    position: absolute;
+    top: 10px;
+    z-index: 5;
+    background-color: rgba(27, 39, 54);
+    color: #fff;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .editor-page-indicator.visible {
+    opacity: 1;
+  }
+  
+  .editor-page-indicator.hidden {
+    opacity: 0;
+  }
+  
+  .editor-pdf-wrapper {
+    width: 100%;
+    height: 100%;
+  }  
+
+.editor-chat-container {
+    height: 100%;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+}
+
+.editor-chat-left-container-wrapper {
+    display: flex;
+    width: 11px;
+    height: 100%;
+    z-index: 12;
+    box-shadow: -2px 0px 2px 0 rgba(0, 0, 0, 0.15);
+    background-color: rgb(29, 41, 59);
+}
+
+.editor-chat-left-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    width: 11px;
+    height: 100%;
+}
+
+.editor-chat-left-container:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: ew-resize;
+}
+
+.editor-chat-left-container:active {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.editor-chat-left-container img {
+    width: 10px;
+    user-select: none;
+}
+
+.chat-llmoptions-container {
+    position: absolute;
+    z-index: 999;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1A2638;
+    width: 150px;
+    transition: right 0.2s ease;
+    box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 3px;
+}
+
+.chat-llmoptions-button-chatgpt,
+.chat-llmoptions-button-claude,
+.chat-llmoptions-button-gemini,
+.chat-llmoptions-button-llama {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    position: relative;
+}
+
+.chat-llmoptions-button-chatgpt {
+    border-radius: 3px 3px 0px 0px;
+}
+
+.chat-llmoptions-button-claude,
+.chat-llmoptions-button-gemini {
+    border-radius: 0;
+}
+
+.chat-llmoptions-button-llama {
+    border-radius: 0px 0px 3px 3px;
+}
+
+.chat-llmoptions-button-chatgpt:hover,
+.chat-llmoptions-button-claude:hover,
+.chat-llmoptions-button-gemini:hover,
+.chat-llmoptions-button-llama:hover {
+    cursor: pointer;
+    background-color: #16202e;
+}
+
+.chat-llmoptions-leftarrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    z-index: 1000;
+}
+
+.chat-llmoptions-leftarrow-container:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.chat-llmoptions-button-chatgpt:hover .chat-llmoptions-leftarrow-container,
+.chat-llmoptions-button-claude:hover .chat-llmoptions-leftarrow-container,
+.chat-llmoptions-button-gemini:hover .chat-llmoptions-leftarrow-container,
+.chat-llmoptions-button-llama:hover .chat-llmoptions-leftarrow-container {
+    opacity: 1;
+}
+
+.chat-llmoptions-leftarrow-container img {
+    width: 10px;
+    height: 10px;
+    user-select: none;
+}
+
+.chat-llmoptions-text-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    user-select: none;
+}
+
+.chat-llmoptions-text-container span {
+    font-family: 'Bai Jumjuree medium', Roboto, sans-serif;
+    font-size: 14px;
+    color: #F7F7F7;
+    user-select: none;
+}
+
+.chat-llmoptions-availability {
+    position: absolute;
+    right: 0;
+    display: flex;
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30px;
+}
+
+.chat-llmoptions-availability:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.chat-llmoptions-availability img {
+    width: 12px;
+    height: 12px;
+    user-select: none;
+}
+
+.chat-llmoptions-extension-container {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: fit-content;
+    position: absolute;
+    top: 40px;
+    transition: right 0.2s ease;
+    background-color: #1A2638;
+    box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 3px;
+    z-index: 1001;
+}
+
+.chat-llmoptions-extension-option-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.chat-llmoptions-extension-option-button.top {
+    border-radius: 3px 3px 0px 0px;
+}
+
+.chat-llmoptions-extension-option-button.bottom {
+    border-radius: 0px 0px 3px 3px;
+}
+
+.chat-llmoptions-extension-option-button span {
+    font-family: 'Bai Jumjuree medium', Roboto, sans-serif;
+    font-size: 13px;
+    color: #F7F7F7;
+    user-select: none;
+}
+
+.chat-llmoptions-extension-option-button:hover {
+    cursor: pointer;
+    background-color: #16202e;
+}
+
+.chat-parseoptions-container {
+    position: absolute;
+    z-index: 998;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1A2638;
+    width: 150px;
+    transition: right 0.2s ease;
+    box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 3px;
+}
+
+.chat-parseoptions-button-default,
+.chat-parseoptions-button-adobe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    position: relative;
+}
+
+.chat-parseoptions-button-default {
+    border-radius: 3px 3px 0px 0px;
+}
+
+.chat-parseoptions-button-adobe {
+    border-radius: 0px 0px 3px 3px;
+}
+
+.chat-parseoptions-button-default:hover,
+.chat-parseoptions-button-adobe:hover {
+    cursor: pointer;
+    background-color: #16202e;
+}
+
+.chat-parseoptions-text-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    user-select: none;
+}
+
+.chat-parseoptions-text-container span {
+    font-family: 'Bai Jumjuree medium', Roboto, sans-serif;
+    font-size: 14px;
+    color: #F7F7F7;
+    user-select: none;
+}
+
+.chat-parseoptions-availability {
+    position: absolute;
+    right: 0;
+    display: flex;
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30px;
+}
+
+.chat-parseoptions-availability:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.chat-parseoptions-availability img {
+    width: 12px;
+    height: 12px;
+    user-select: none;
+}
+
+.apikey-dialog-box-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media (max-height: 215px) {
+    .editor-pdf-left-container-wrapper {
+        top: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu-button img,
+    .zoom-in-button img,
+    .zoom-out-button img,
+    .fit-width-button img,
+    .maximize-button img,
+    .minimize-button img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .gallery-button img,
+    .code-files-button img {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu-button img,
+    .zoom-in-button img,
+    .zoom-out-button img,
+    .fit-width-button img,
+    .maximize-button img,
+    .minimize-button img {
+        width: 11px;
+        height: 11px;
+    }
+
+    .gallery-button img,
+    .code-files-button img {
+        height: 11px;
+        width: 11px;
+    }
+}
+
+@media (max-width: 650px) {
+    .menu-button img,
+    .zoom-in-button img,
+    .zoom-out-button img,
+    .fit-width-button img,
+    .maximize-button img,
+    .minimize-button img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .gallery-button img,
+    .code-files-button img {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .editor-main-container {
+        flex-direction: column;
+        position: relative;
+        height: 100dvh;
+    }
+
+    .editor-main-right-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        z-index: 98;
+    }
+
+    .editor-pdf-container {
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .editor-chat-container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .chatopen-button-wrapper-mobile {
+        position: absolute;
+        bottom: 0;
+        right: 45vw;
+        background-color: rgb(30, 45, 63);
+        border-radius: 3px 3px 0px 0px;
+        box-shadow: 1px -1px 2px 0px rgba(0, 0, 0, 0.3);
+        z-index: 99;
+        user-select: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .chatopen-button-mobile {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 3px 3px 0px 0px;
+        width: 100%;
+        height: 100%;
+        padding: 8px 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chatopen-button-mobile:hover {
+        background-color: rgba(0, 0, 0, 0.20);
+        cursor: pointer;
+    }
+    
+    .chatopen-button-mobile:active {
+        background-color: rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+    
+    .chatopen-button-mobile img {
+        width: 12px;
+        height: 12px;
+        transform: rotate(-90deg);
+    }
+
+    .editor-chat-top-container-wrapper {
+        height: 11px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(29, 41, 59);
+    }
+
+    .editor-chat-top-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .editor-chat-top-container:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        cursor: ns-resize;
+    }
+
+    .editor-chat-top-container:active {
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    .editor-chat-top-container:active .editor-pdf-container {
+        pointer-events: none;
+    }
+
+    .editor-chat-top-container img {
+        width: 10px;
+        transform: rotate(90deg);
+        user-select: none;
+    }
+
+    .editor-chat-container-wrapper {
+        flex-grow: 1;
+        display: flex;
+    }
+}
+
+.editor-sonner-toast {
+    font-family: 'Bai Jumjuree medium', Arial, Helvetica, sans-serif;
+    background-color: #1B2636;
+    color: white !important;
+    border-color: #1B2636;
+    border-radius: 4px;
+    padding: 10px 15px !important;
+    width: 320px;
+    transition: all 0.2s ease !important;
+}
+
+.editor-sonner-toast:hover {
+    background-color: #1e2a3c;
+    border-color: #1e2a3c;
+    cursor: pointer;
+}
+
+.editor-sonner-title {
+    user-select: none !important;
+}
+
+.editor-sonner-description {
+    font-family: 'Bai Jumjuree regular', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: white;
+    user-select: none !important;
+}
+
+.editor-sonner-error-toast {
+    font-family: 'Bai Jumjuree medium', Arial, Helvetica, sans-serif !important;
+    color: white !important;
+    background-color: #b90b0b;
+    border-color: #b90b0b;
+    padding: 10px 15px !important;
+    transition: all 0.2s ease !important;
+    width: 320px;
+}
+
+.editor-sonner-error-toast:hover {
+    background-color: #c50c0c;
+    border-color: #c50c0c;
+    cursor: pointer;
+}

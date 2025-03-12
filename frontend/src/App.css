@@ -1,0 +1,279 @@
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('./assets/fonts/AlegreyaSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+font-family: 'Alegreya Sans';
+src: url('./assets/fonts/AlegreyaSans-Medium.ttf') format('truetype');
+font-weight: medium;
+font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('./assets/fonts/AlegreyaSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+font-family: 'Alegreya Sans SC';
+src: url('./assets/fonts/AlegreyaSansSC-Medium.ttf') format('truetype');
+font-weight: medium;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Alegreya Sans SC';
+src: url('./assets/fonts/AlegreyaSansSC-Bold.ttf') format('truetype');
+font-weight: bold;
+font-style: normal;
+}
+
+/* General Reset */
+* {
+margin: 0;
+padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+.App {
+  background: linear-gradient(135deg, #1E2A3C 0%, #2A3A4C 100%);
+  display: flex;
+  height: 100dvh;
+}
+
+.left-navbar { 
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px 0px 5px;
+  height: 100dvh;
+  position: relative;
+  z-index: 1001;
+}
+
+.navbar-logo {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.navbar-logo:hover {
+cursor: pointer;
+}
+
+.navbar-logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.nav-icons {
+  list-style-type: none;
+  align-items: center;
+  flex-grow: 1;
+  margin-top: 10px;
+}
+
+.nav-icons li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  margin: 15px 0px;
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nav-icons li:hover {
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.nav-icons li:active {
+  transform: scale(1);
+}
+
+.nav-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-icons img:hover, .help-button img:hover {
+  opacity: 1;
+}
+
+.help-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.help-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.help-button:active {
+  transform: scale(1);
+}
+
+.help-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.expanded-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100dvh;
+  background-color: #ffffffa2;
+  backdrop-filter: blur(6px);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: slideIn 0.3s ease-out;
+  z-index: 1002;
+}
+
+.expanded-navbar-logo-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  user-select: none;
+}
+
+.expanded-navbar-logo-container:hover {
+  cursor: pointer;
+}
+
+.expanded-navbar-logo-container img {
+  width: 45px;
+  height: 45px;
+}
+
+.expanded-navbar-logo-container div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.expanded-navbar-logo-container span {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.expanded-nav-icons {
+  list-style-type: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: stretch;
+}
+
+.expanded-nav-icons li {
+  display: flex;
+  gap: 15px;
+  padding: 10px 20px;
+  margin: 10px;
+  transition: background 0.2s, transform 0.2s;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.expanded-nav-icons li:hover {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.expanded-nav-icons li:active {
+  transform: scale(1);
+}
+
+.expanded-nav-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.expanded-nav-icons li div {
+  flex-grow: 1;
+  display: flex;
+}
+
+.expanded-nav-icons div span {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 19px;
+  font-weight: medium;
+  color: #000;
+}
+
+.expanded-navbar-page-info {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.slide-in {
+  animation: slideIn 0.2s ease-in-out forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.nav-icons li.active,
+.expanded-nav-icons li.active {
+  background: rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #0078FF;
+}
+
+.nav-icons li.active img,
+.expanded-nav-icons li.active img {
+  opacity: 1;
+}

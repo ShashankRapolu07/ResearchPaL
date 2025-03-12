@@ -1,0 +1,247 @@
+ .papersLoader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+  
+  .papersLoader-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 927px;
+    height: 285px;
+    background-color: #ffffffbc;
+    border-radius: 3px;
+    padding: 25px 30px 25px 15px;
+    box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .papersLoader-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px; 
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: papersLoaderShimmer 1.5s infinite;
+  }
+  
+  @keyframes papersLoaderShimmer {
+    0% {
+      left: -150px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .papersLoader-indexCol {
+    width: 30px;
+    height: 100%;
+    background-color: #d3d3d3;
+    flex-shrink: 0;
+    border-radius: 2px;
+  }
+
+  .papersLoader-dividerLeft {
+    width: 2px;
+    height: 95%;
+    background-color: #dadada;
+    margin: 0px 30px 0px 15px; 
+  }
+  
+  .papersLoader-dividerRight {
+    width: 2px;
+    height: 65%;
+    background-color: #dadada;
+    margin: 0 30px;
+  }
+  
+
+  .papersLoader-mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 9px 0px 0px 0px;
+    width: 570px;
+    gap: 50px;
+  }
+  
+  .papersLoader-title {
+    width: 70%;
+    height: 25px;
+    background-color: #d3d3d3;
+    border-radius: 4px;
+  }
+  
+  .papersLoader-abstract {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .papersLoader-abstract > div {
+    width: 95%;
+    height: 14px;
+    background-color: #d3d3d3;
+    border-radius: 4px;
+  }
+  
+  .papersLoader-meta {
+    width: 60%;
+    height: 14px;
+    background-color: #d3d3d3;
+    border-radius: 4px;
+    margin-top: auto;
+  }
+  
+  .papersLoader-pdfPreview {
+    width: 183px;
+    height: 235px;
+    background-color: #d3d3d3;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    opacity: 0.85;
+  }
+
+  @media (max-width: 1160px) {
+    .papersLoader-card {
+      width: 907px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .papersLoader-card {
+      width: 887px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .papersLoader-card {
+      width: 837px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .papersLoader-card {
+      width: 772px;
+      height: 235px;
+      padding: 20px 25px 20px 10px;
+    }
+  
+    .papersLoader-dividerLeft {
+      margin: 0px 20px 0px 10px;
+      height: 98%;
+    }
+
+    .papersLoader-dividerRight {
+      margin: 0 25px;
+      height: 60%;
+    }
+
+    .papersLoader-mainContent {
+      gap: 30px;
+    }
+
+    .papersLoader-pdfPreview {
+      width: 153px;
+      height: 195px;
+    }
+  }
+  
+  @media (max-width: 950px) {
+    .papersLoader-container {
+      gap: 30px;
+    }
+
+    .papersLoader-card {
+      width: 754px;
+      height: 214px;
+    }
+    .papersLoader-pdfPreview {
+      width: 135px;
+      height: 174px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .papersLoader-card {
+      width: 713px;
+      height: 203px;
+      padding: 20px 20px 20px 10px;
+    }
+
+    .papersLoader-dividerLeft {
+      margin: 0px 15px 0px 10px;
+    }
+
+    .papersLoader-title {
+      margin-bottom: 10px;
+    }
+
+    .papersLoader-abstract {
+      gap: 7px;
+    }
+
+    .papersLoader-abstract > div {
+      height: 11px;
+    }
+
+    .papersLoader-dividerRight {
+      margin: 0px 20px;
+    }
+
+    .papersLoader-mainContent {
+      gap: 20px;
+    }
+
+    .papersLoader-pdfPreview {
+      width: 127px;
+      height: 163px;
+    }
+  }
+  
+  @media (max-width: 830px) {
+    .papersLoader-card {
+      width: 654px;
+      height: 173px;
+      padding: 15px 15px 15px 7px;
+    }
+
+    .papersLoader-mainContent {
+      width: 450px;
+    }
+
+    .papersLoader-title {
+      margin-bottom: 5px;
+    }
+
+    .papersLoader-dividerLeft {
+      margin: 0px 13px 0px 7px;
+    }
+
+    .papersLoader-abstract > div {
+      height: 10px;
+    }
+
+    .papersLoader-dividerRight {
+      margin: 0px 15px;
+    }
+
+    .papersLoader-pdfPreview {
+      width: 112px;
+      height: 143px;
+    }
+  }  

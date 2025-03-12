@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        pwc=paperswithcode.__main__:app
+    

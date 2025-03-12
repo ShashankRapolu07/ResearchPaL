@@ -1,0 +1,92 @@
+{
+  "name": "researchpal-app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
+    "@babel/plugin-transform-private-property-in-object": "^7.25.9",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@google/generative-ai": "^0.21.0",
+    "@langchain/anthropic": "^0.3.12",
+    "@langchain/community": "^0.3.28",
+    "@langchain/core": "^0.3.37",
+    "@langchain/google-genai": "^0.1.8",
+    "@langchain/groq": "^0.1.3",
+    "@langchain/langgraph": "^0.2.44",
+    "@langchain/openai": "^0.4.2",
+    "@mui/material": "^6.3.0",
+    "axios": "^1.7.9",
+    "buffer": "^6.0.3",
+    "cra-template": "1.2.0",
+    "crypto-browserify": "^3.12.1",
+    "crypto-js": "^4.2.0",
+    "dexie": "^4.0.11",
+    "dexie-react-hooks": "^1.1.7",
+    "dotenv": "^16.4.7",
+    "katex": "^0.16.21",
+    "langchain": "^0.3.19",
+    "langsmith": "^0.3.12",
+    "ldrs": "^1.0.2",
+    "os": "^0.1.2",
+    "papaparse": "^5.5.1",
+    "path-browserify": "^1.0.1",
+    "pdfjs-dist": "^4.8.69",
+    "process": "^0.11.10",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^5.5.0",
+    "react-loader-spinner": "^6.1.6",
+    "react-markdown": "^9.0.1",
+    "react-pdf": "^9.2.1",
+    "react-player": "^2.16.0",
+    "react-router-dom": "^7.0.2",
+    "react-scripts": "5.0.1",
+    "react-spinners-kit": "^1.9.1",
+    "react-switch": "^7.1.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "react-toastify": "^11.0.2",
+    "react-transition-group": "^4.4.5",
+    "react-window": "^1.8.11",
+    "rehype-katex": "^7.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "sonner": "^1.7.4",
+    "stream-browserify": "^3.0.0",
+    "tsx": "^4.19.2",
+    "util": "^0.12.5",
+    "uuid": "^11.1.0",
+    "vm-browserify": "^1.1.2",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "react-app-rewired": "^2.2.1",
+    "typescript": "^4.9.5"
+  }
+}

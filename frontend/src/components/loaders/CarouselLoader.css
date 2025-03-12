@@ -1,0 +1,210 @@
+.trending-carousel.carousel-loader {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+    overflow: hidden;
+    overflow-y: visible;
+  }
+  
+  .trending-carousel.carousel-loader .arrow-carousel {
+    display: none !important;
+  }
+  
+  .sk-carousel-items {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    perspective: 1000px;
+  }
+  
+  .sk-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transition:
+      transform 0.4s ease-in-out,
+      opacity 0.4s ease-in-out,
+      filter 0.4s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .sk-level0 {
+    transform: translate(-50%, -50%) scale(1) rotateY(0deg);
+    opacity: 1;
+    filter: none;
+    z-index: 10;
+  }
+  .sk-level1 {
+    transform: translate(45%, -50%) scale(0.75) rotateY(0deg);
+    opacity: 0.7;
+    filter: blur(3px);
+    z-index: 5;
+  }
+  .sk-level2 {
+    transform: translate(125%, -50%) scale(0.75) rotateY(0deg);
+    opacity: 0.5;
+    filter: blur(3px);
+    z-index: 1;
+  }
+  .sk-level-1 {
+    transform: translate(-145%, -50%) scale(0.75) rotateY(0deg);
+    opacity: 0.7;
+    filter: blur(3px);
+    z-index: 5;
+  }
+  .sk-level-2 {
+    transform: translate(-225%, -50%) scale(0.75) rotateY(0deg);
+    opacity: 0.5;
+    filter: blur(3px);
+    z-index: 1;
+  }
+  
+  .sk-level-outside {
+    transform: translate(-9999px, -9999px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .skeleton-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 750px;
+    height: 235px;
+    background-color: #ffffffbc;
+    border-radius: 3px;
+    padding: 20px 25px 20px 15px;
+    box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+  
+  .skeleton-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: skeleton-loading 1.5s infinite;
+  }
+  
+  @keyframes skeleton-loading {
+    0% {
+      left: -150px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .sk-index {
+    width: 20px;
+    height: 100%;
+    background-color: #d3d3d3;
+    margin-right: 15px;
+    flex-shrink: 0;
+    border-radius: 2px;
+  }
+  
+  .sk-divider-left {
+    width: 2px;
+    height: 95%;
+    background-color: #dadada;
+    margin-right: 25px;
+  }
+  
+  .sk-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    height: 100%;
+  }
+  
+  .sk-title {
+    width: 70%;
+    height: 30px;
+    background-color: #d3d3d3; 
+    margin: 8px 0;
+    border-radius: 2px;
+  }
+  
+  .sk-abstract {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 10px 0;
+  }
+
+  .sk-abstract > div {
+    height: 14px;
+    width: 95%;
+    background-color: #d3d3d3;
+    border-radius: 2px;
+  }
+  
+  .sk-meta {
+    width: 60%;
+    height: 14px;
+    background-color: #d3d3d3; 
+    margin-bottom: 6px;
+    border-radius: 2px;
+  }
+  
+  .sk-divider-right {
+    width: 2px;
+    height: 65%;
+    background-color: #dadada;
+    margin: 0 25px;
+  }
+  
+  .sk-pdf {
+    width: 170px;
+    height: 195px;
+    background-color: #d3d3d3;
+    border: 1px solid #b9b9b9;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 1030px) {
+    .sk-level1 {
+      transform: translate(40%, -50%) scale(0.75) rotateY(0deg);
+    }
+
+    .sk-level-1 {
+      transform: translate(-140%, -50%) scale(0.75) rotateY(0deg);
+    }
+  }
+  
+  @media (max-width: 950px) {
+    .skeleton-card {
+      width: 700px;
+      height: 235px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .skeleton-card {
+      width: 650px;
+      height: 210px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .sk-carousel-items {
+      height: 335px;
+    }
+    .skeleton-card {
+      width: 600px;
+      height: 200px;
+    }
+  }  

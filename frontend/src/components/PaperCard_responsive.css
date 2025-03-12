@@ -1,0 +1,451 @@
+@font-face {
+    font-family: 'Alegreya Sans normal';
+    src: url('../assets/fonts/AlegreyaSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans medium';
+  src: url('../assets/fonts/AlegreyaSans-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans bold';
+    src: url('../assets/fonts/AlegreyaSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  src: url('../assets/fonts/AlegreyaSansSC-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  src: url('../assets/fonts/AlegreyaSansSC-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.paper-card-responsive {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffffbc;
+    padding: 25px 25px 15px 25px;
+    width: 350px;
+    height: 441px;
+    border-radius: 3px;
+    box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.paper-card-responsive:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0px 0px 25px 4px rgba(255, 255, 255, 0.2);
+}
+
+.paper-card-responsive:active {
+    transform: scale(1);
+}
+
+.pdf-preview-container-responsive {
+    border: 1px solid #0000005d;
+    height: 150px;
+    width: 300px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.85;
+}
+
+.pdf-preview-container-responsive:hover {
+    border: 1.5px solid rgb(95, 95, 95);
+}
+
+.pdf-preview-container-responsive:active {
+    opacity: 0.7;
+}
+
+.main-content-responsive {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.title-and-abstract-container-responsive {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-container-responsive {
+    display: flex;
+    flex-direction: column;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title-container-responsive span {
+    width: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: #464646;
+}
+
+.abstract-container-responsive {
+    padding-right: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.abstract-container-responsive span {
+    width: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 15px;
+    text-align: left;
+    color: #464646;
+}
+
+.metadata-container-responsive {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dot-separator-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot-separator-responsive img {
+    width: 8px;
+    height: 8px;
+}
+
+.date-container-responsive {
+    display: flex;
+    height: fit-content;
+}
+
+.date-container-responsive span,
+.github-profile-responsive a,
+.github-stars-responsive span {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 13px;
+    color: #464646;
+}
+
+.github-profile-responsive span {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 13px;
+    color: rgb(210, 1, 1);
+}
+
+.paper-stats-container-responsive {
+    display: flex;
+    gap: 5px;
+}
+
+.code-stats-container-responsive {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.github-profile-responsive {
+    display: flex;
+    height: fit-content;
+}
+
+.github-profile-responsive a {
+    color: #1c8ec7;
+}
+
+.code-framework-responsive {
+    display: flex;
+    height: fit-content;
+    padding-top: 2px;
+}
+
+.code-framework-responsive-pytorch {
+    width: 45px;
+}
+
+.code-framework-responsive-tf {
+    width: 35px;
+}
+
+.github-stars-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    height: fit-content;
+}
+
+.github-stars-img-container-responsive {
+    padding-top: 0px;
+    display: flex;
+}
+
+.github-stars-img-container-responsive img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .pdf-loader-responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .no-hover {
+    pointer-events: none;
+    transform: none !important;
+    border: 1px solid #0000005d !important;
+  }
+  
+  .pdf-preview-container-responsive.no-hover:hover {
+    border: 1px solid #0000005d;
+    transform: none;
+    cursor: default;
+  }
+
+  .papercard-error-container-responsive {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Alegreya Sans normal', sans-serif;
+    font-size: 14px;
+  }
+
+@media (min-width: 701px) and (max-width: 800px) {
+    .paper-card-responsive {
+        width: 500px;
+        height: 429px;
+    }
+
+    .pdf-preview-container-responsive {
+        width: 450px;
+    }
+
+    .title-container-responsive span {
+        font-size: 21px;
+    }
+
+    .abstract-container-responsive span {
+        font-size: 15px;
+    }
+
+    .github-profile-responsive {
+        max-width: 200px;
+        overflow: hidden;
+    }
+
+    .date-container-responsive span,
+    .github-profile-responsive a,
+    .github-stars-responsive span {
+        font-size: 15px;
+    }
+
+    .github-profile-responsive span {
+        font-family: 'Alegreya Sans', sans-serif;
+        font-size: 15px;
+        color: rgb(210, 1, 1);
+    }
+
+    .github-profile-responsive span {
+        font-size: 15px;
+    }
+
+    .code-framework-responsive-pytorch {
+        width: 50px;
+    }
+
+    .code-framework-responsive-tf {
+        width: 65px;
+    }
+
+    .papercard-error-container-responsive {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 650px) and (max-width:700px) {
+    .paper-card-responsive {
+        width: 450px;
+        height: 418px;
+    }
+
+    .pdf-preview-container-responsive {
+        width: 400px;
+    }
+
+    .code-framework-responsive-tf {
+        width: 60px;
+    }
+
+    .github-profile-responsive {
+        max-width: 150px;
+        overflow: hidden;
+    }
+
+    .papercard-error-container-responsive {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 650px) {
+    .title-container-responsive span {
+        font-size: 18px;
+    }
+
+    .abstract-container-responsive span {
+        font-size: 14.5px;
+    }
+
+    .date-container-responsive span,
+    .github-profile-responsive a,
+    .github-stars-responsive span {
+        font-size: 12px;
+    }
+
+    .github-profile-responsive span {
+        font-size: 12px;
+    }
+
+    .code-framework-responsive-tf {
+        width: 55px;
+    }
+
+    .papercard-error-container-responsive {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 530px) {
+    .paper-card-responsive {
+        width: 300px;
+        height: 441px;
+    }
+
+    .pdf-preview-container-responsive {
+        width: 250px;
+    }
+
+    .title-container-responsive span {
+        font-size: 17px;
+    }
+
+    .date-container-responsive span,
+    .github-profile-responsive a,
+    .github-stars-responsive span {
+        font-size: 12px;
+    }
+
+    .github-profile-responsive span {
+        font-size: 12px;
+    }
+
+    .github-profile-responsive {
+        max-width: 130px;
+        overflow: hidden;
+    }
+
+    .papercard-error-container-responsive {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 450px) {
+    .paper-card-responsive {
+        width: 250px;
+        height: 398px;
+        padding: 20px 20px 15px 20px;
+    }
+
+    .pdf-preview-container-responsive {
+        height: 120px;
+        width: 210px;
+    }
+
+    .title-container-responsive span {
+        font-size: 15px;
+    }
+
+    .abstract-container-responsive span {
+        font-size: 12px;
+    }
+
+    .date-container-responsive span,
+    .citation-container-responsive span,
+    .github-profile-responsive a,
+    .github-stars-responsive span {
+    font-size: 10px;
+    }
+
+    .github-profile-responsive span {
+        font-size: 10px;
+      }
+
+    .code-framework-responsive-pytorch {
+        width: 37px;
+    }
+
+    .code-framework-responsive-tf {
+        width: 47px;
+    }
+
+    .papercard-error-container-responsive {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:350px) {
+    .paper-card-responsive {
+        width: 220px;
+        height: 397px;
+    }
+
+    .pdf-preview-container-responsive {
+        width: 180px;
+    }
+
+    .date-container-responsive span,
+    .citation-container-responsive span,
+    .github-profile-responsive a,
+    .github-stars-responsive span {
+        font-size: 10px;
+    }
+
+    .github-profile-responsive span {
+        font-size: 10px;
+      }
+
+    .code-framework-responsive-pytorch {
+        width: 37px;
+    }
+}

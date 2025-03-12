@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: tea-console
+Version: 0.0.6
+Summary: Set of helpers for developing console apps.
+Home-page: https://github.com/alefnula/tea-console
+Author: Viktor Kerkez
+Author-email: alefnula@gmail.com
+Maintainer: Viktor Kerkez
+Maintainer-email: alefnula@gmail.com
+License: Apache-2.0
+Platform: Windows
+Platform: POSIX
+Platform: MacOSX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pytz (~=2021.1)
+Requires-Dist: rich (~=9.11.0)
+Requires-Dist: tea (~=0.1.3)
+Requires-Dist: typer (~=0.3.2)
+Requires-Dist: tzlocal (~=2.1)
+
+# Tea Console
+
+
