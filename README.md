@@ -71,10 +71,10 @@ ResearchPaL is built on a **cutting-edge, scalable and production-ready tech sta
 
 User security and privacy are top priorities. Your API keys are **never stored on our servers**—instead, they are **securely encrypted and stored locally on your machine**.
 
-- **Local Storage Only:** Your API keys remain on your device and are never transmitted to external servers.
-- **End-to-End Encryption:** Every key is securely encrypted, ensuring maximum protection.
+- **Local Storage Only:** Your API keys remain on your device and are never saved on our servers.
+- **End-to-End Encryption:** Even though locally stored, every key is securely encrypted, ensuring maximum protection.
 - **Minimal Server Communication:** All AI agent calls are processed directly on your machine, meaning your keys **never leave your local environment**.
-- **Full Transparency:** ResearchPaL is **open-source**, allowing you to verify how your API keys are handled. Check out the code [here](https://github.com/ShashankRapolu07?tab=repositories).
+- **Full Transparency:** ResearchPaL is **open-source**, allowing you to verify how exactly your API keys are handled. Check out the code [here](https://github.com/ShashankRapolu07?tab=repositories).
 
 **How We Handle Your API Keys:**
 
