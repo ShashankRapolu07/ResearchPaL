@@ -80,7 +80,7 @@ User security and privacy are top priorities. Your API keys are **never stored o
 
 |     OpenAI/ Anthropic/ Groq      |              Google              |              Adobe               |
 | :------------------------------: | :------------------------------: | :------------------------------: |
-| ![AKH 1](API Key Handling 1.png) | ![AKH 2](API Key Handling 2.png) | ![AKH 3](API Key Handling 3.png) |
+| ![AKH 1](API%20Key%20Handling%201.png) | ![AKH 2](API%20Key%20Handling%202.png) | ![AKH 3](API%20Key%20Handling%203.png) |
 
 
 
