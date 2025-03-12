@@ -92,7 +92,7 @@ User security and privacy are top priorities. Your API keys are **never stored o
 
 |            Empty State            |            After Query            |
 | :-------------------------------: | :-------------------------------: |
-| ![Alt text 1](ask ai agent 2.png) | ![Alt text 2](ask ai agent 1.png) |
+| ![Alt text 1](ask%20ai%20agent%202.png) | ![Alt text 2](ask%20ai%20agent%201.png) |
 
 ### 2️⃣ Citation Mode – Authenticity at Its Best
 
@@ -100,7 +100,7 @@ User security and privacy are top priorities. Your API keys are **never stored o
 
 |             Normal Mode              |              Citation Mode              |
 | :----------------------------------: | :-------------------------------------: |
-| ![Normal Mode](Citation Mode no.png) | ![Citation Mode](Citation Mode yes.png) |
+| ![Normal Mode](Citation%20Mode%20no.png) | ![Citation Mode](Citation%20Mode%20yes.png) |
 
 No additional token usage or API requests are consumed by the **Citation mode**.
 
@@ -139,11 +139,11 @@ The system was evaluated using the following key metrics:
 
 |           Context Recall Plot (Default Mode)            |
 | :-----------------------------------------------------: |
-| ![Context Recall Plot Default](Context Recall Plot.png) |
+| ![Context Recall Plot Default](Context%20Recall%20Plot.png) |
 
 |            Context Precision Plot (Default Mode)             |
 | :----------------------------------------------------------: |
-| ![Context Precision Plot Default](Context Precision Plot.png) |
+| ![Context Precision Plot Default](Context%20Precision%20Plot.png) |
 
 **Optimal Values of Chunk Size and k (Default Mode):**
 
@@ -151,15 +151,15 @@ A threshold of `0.90` is considered for Context Recall. Based on this and above 
 
 |   Context Precision & Context Recall Plots (Advanced Mode)   |
 | :----------------------------------------------------------: |
-| ![Context Precision & Context Recall Plots Advanced](Context Precision & Context Recall Advanced.png) |
+| ![Context Precision & Context Recall Plots Advanced](Context%20Precision%20&%20Context%20Recall%20Advanced.png) |
 
 |            Figure@1 Hit-Rate Plot (Advanced Mode)            |
 | :----------------------------------------------------------: |
-| ![Figure@1 Hit-Rate Plot Advanced](Figure@1 Hit-Rate Plot.png) |
+| ![Figure@1 Hit-Rate Plot Advanced](Figure@1%20Hit-Rate%20Plot.png) |
 
 |            Table@1 Hit-Rate Plot (Advanced Mode)             |
 | :----------------------------------------------------------: |
-| ![Table@1 Hit-Rate Plot Advanced](Table@1 Hit-Rate Plot.png) |
+| ![Table@1 Hit-Rate Plot Advanced](Table@1%20Hit-Rate%20Plot.png) |
 
 **Optimal Values of Chunk Size and k (Advanced Mode):**
 
