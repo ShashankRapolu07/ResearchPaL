@@ -34,7 +34,9 @@ By integrating multi-modal capabilities, ResearchPaL ensures that **complex data
 
 **Architecture Overview:**
 
-<img src="RAG Architecture Diagram.svg">
+<p align="center">
+  <img src="RAG Architecture Diagram.svg">
+</p>
 
 #### How does ResearchPaL access Figures & Tables?
 
@@ -64,7 +66,9 @@ ResearchPaL is built on a **cutting-edge, scalable and production-ready tech sta
 
 #### System Architecture (High Level):
 
-<img src="System Design.svg" width=800>
+<p align="center">
+  <img src="System Design.svg" width=800>
+</p>
 
 
 
@@ -119,7 +123,9 @@ No additional token usage or API requests are consumed by the **Citation mode**.
 
 *Need a detailed explanation or a full paper summary?* This mode **expands AI’s access to larger sections of the paper**, ensuring **comprehensive answers** to your queries. Ideal for summarizing complex papers **without missing crucial details**.
 
-<img src="Retrieval Quality Enhancer Mode.png" width=450>
+<p align="center">
+  <img src="Retrieval Quality Enhancer Mode.png" width=450>
+</p>
 
 **Note:** Incurs additional token usage and +1 API request.
 
