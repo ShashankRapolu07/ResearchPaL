@@ -178,45 +178,48 @@ Advanced mode uses <u>same</u> text chunks from Default mode. This means the con
 
 To evaluate real-time performance, *P50* latencies (median values) were measured for different query types across **Default Mode** and **Advanced Mode**.
 
-<table>
+<p align="center">
+  <table>
     <thead>
-        <tr>
-            <th>Category</th>
-            <th colspan="2">Query Latency (ms)</th>
-            <th colspan="2">Response Latency (ms)</th>
-        </tr>
-        <tr>
-            <th></th>
-            <th>Default</th>
-            <th>Advanced</th>
-            <th>Default</th>
-            <th>Advanced</th>
-        </tr>
+      <tr>
+        <th>Category</th>
+        <th colspan="2">Query Latency (ms)</th>
+        <th colspan="2">Response Latency (ms)</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>Default</th>
+        <th>Advanced</th>
+        <th>Default</th>
+        <th>Advanced</th>
+      </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><b>Only Text</b></td>
-            <td style="background-color: #90EE90;"><b>646.5</b></td>
-            <td>869.5</td>
-            <td style="background-color: #90EE90;"><b>2620.5</b></td>
-            <td>4374.5</td>
-        </tr>
-        <tr>
-            <td><b>Text + Image</b></td>
-            <td>3351.5</td>
-            <td>3965.0</td>
-            <td>6958.5</td>
-            <td>8494.0</td>
-        </tr>
-        <tr>
-            <td><b>Text + File</b></td>
-            <td>1865.0</td>
-            <td>1988.5</td>
-            <td>3783.5</td>
-            <td>5147.0</td>
-        </tr>
+      <tr>
+        <td><b>Only Text</b></td>
+        <td>646.5</td>
+        <td>869.5</td>
+        <td>2620.5</td>
+        <td>4374.5</td>
+      </tr>
+      <tr>
+        <td><b>Text + Image</b></td>
+        <td>3351.5</td>
+        <td>3965.0</td>
+        <td>6958.5</td>
+        <td>8494.0</td>
+      </tr>
+      <tr>
+        <td><b>Text + File</b></td>
+        <td>1865.0</td>
+        <td>1988.5</td>
+        <td>3783.5</td>
+        <td>5147.0</td>
+      </tr>
     </tbody>
-</table>
+  </table>
+</p>
+
 
 **Note:**
 
