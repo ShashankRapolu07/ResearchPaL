@@ -87,7 +87,7 @@ User security and privacy are top priorities. Your API keys are **never stored o
 
 ## Key Features of ResearchPaL
 
-### 1️⃣ Ask AI Agent – Your Instant Research Guide
+### 1️⃣ Ask AI Agent – Quickly Decide Whether to Read a Paper
 
 *Not sure if a paper is worth reading?* **Ask AI Agent** provides a **quick, high-level summary** of any research paper, helping you grasp its core ideas **in seconds**. This feature lets you decide whether the paper is relevant to your needs—saving you **hours of reading time**.
 
