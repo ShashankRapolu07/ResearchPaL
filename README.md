@@ -37,7 +37,7 @@ By integrating multi-modal capabilities, ResearchPaL ensures that **complex data
 
 #### How does ResearchPaL access Figures & Tables?
 
-Academic papers are often packed with **critical information in figures and tables**. Unlike traditional AI assistants that rely solely on text, **ResearchPaL extracts and analyzes these visual components** for a richer and more insightful research experience.
+Academic papers are often packed with **critical information in figures and tables**. Unlike traditional AI assistants that rely solely on text, **ResearchPaL extracts and analyzes these visual components** for a richer and more insightful paper analysis.
 
 Using the [Adobe PDF Extract API](https://developer.adobe.com/document-services/apis/pdf-extract/), ResearchPaL accurately retrieves:
 
