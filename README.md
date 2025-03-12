@@ -27,6 +27,7 @@ The AI research landscape is evolving rapidly, with groundbreaking papers emergi
 The system offers two parsing modes:
 
 - **Default Parsing:** Supports text-based queries but does not directly process figures or tables.
+  - You can still pass in figures and tables by taking screenshots and manually attaching along with your text prompt.
 - **Advanced Parsing:** Grants direct access to figures and tables within the paper, making explanations significantly more precise.
 
 By integrating multi-modal capabilities, ResearchPaL ensures that **complex data, diagrams, and visual insights are never lost in translation**—giving you a more comprehensive grasp of any research paper.
