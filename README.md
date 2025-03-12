@@ -14,7 +14,7 @@ The AI research landscape is evolving rapidly, with groundbreaking papers emergi
 
 - **Instant Paper Summarization:** Get key insights without reading the full text.
 - **Deep Understanding Beyond Text:** Unlike other tools, ResearchPaL **extracts figures and tables**, allowing for a richer, more accurate understanding.
-- **Multi-Modal RAG Architecture:** It processes both **text and images**, making explanations more precise.
+- **Multi-Modal RAG Architecture:** It processes both **text and images**, making explanations more reliable.
 - **Advanced AI Agents:** Ask detailed questions, and ResearchPaL will provide clear, well-structured answers in seconds.
 - **Stay Updated Effortlessly:** No need to manually sift through long papers—ResearchPaL distills the most relevant information for you.
 
