@@ -125,7 +125,7 @@ No additional token usage or API requests are consumed by the **Citation mode**.
 
 ## Evaluation and Results
 
-The performance of the **multi-modal RAG architecture** was rigorously evaluated using a small-scale **custom-built academic dataset**, specifically designed to assess retrieval efficiency and accuracy. The complete evaluation dataset, along with the corresponding results, is available [here](https://github.com/ShashankRapolu07/ResearchPaL).
+The performance of the **multi-modal RAG architecture** was rigorously evaluated using a small-scale **custom-built academic dataset**, specifically designed to assess retrieval efficiency and accuracy. The complete evaluation dataset, along with the corresponding results, is available [here](https://github.com/ShashankRapolu07/ResearchPaL/tree/main/evals).
 
 The system was evaluated using the following key metrics:
 
