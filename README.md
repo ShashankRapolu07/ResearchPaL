@@ -148,7 +148,7 @@ The system was evaluated using the following key metrics:
 
 **Optimal Values of Chunk Size and k (Default Mode):**
 
-A threshold of `0.90` is considered for Context Recall. Based on this and above plots, the best Context Precision is achieved for `(2500, 9)` pair. Therefore `chunk size = 2500` and `k = 9` are chosen as optimal values for default mode.
+A threshold of `0.90` is considered for Context Recall. Based on this and the above plots, the best Context Precision is achieved for `(2500, 9)` pair. Therefore `chunk size = 2500` and `k = 9` are chosen as optimal values for default mode.
 
 |   Context Precision & Context Recall Plots (Advanced Mode)   |
 | :----------------------------------------------------------: |
