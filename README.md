@@ -107,7 +107,7 @@ No additional token usage or API requests are consumed by the **Citation mode**.
 
 ### 3️⃣ Follow-Up Suggestions – Navigate Papers Like a Pro
 
-*Need proper guidance through the paper?* **Follow-Up Suggestions** provide **smart, context-aware prompts** to help you **explore deeper insights** without missing key details. This feature enhances your research journey by guiding you through the paper efficiently.
+*Need proper navigation through the paper?* **Follow-Up Suggestions** provide **smart, context-aware prompts** to help you **explore deeper insights** without missing key details. This feature enhances your research journey by navigating you through the paper efficiently.
 
 <img src="Follow-up Suggestions.png" width=450>
 
